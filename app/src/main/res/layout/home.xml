@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFD700"
+    tools:context=".MainActivity">
+
+    <!-- Header section -->
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="대덕구 오정동"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/date_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2024-05-26 08:40 PM"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Main status section -->
+
+    <ImageView
+        android:id="@+id/main_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_neutral_face"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/main_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="보통"
+        android:textSize="30sp"
+        android:textColor="#000000"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/main_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘은 범죄 상태 보통! 오늘은 괜찮아요!"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Crime status section -->
+    <Button
+        android:id="@+id/Homebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#00ff0000"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:text="길을 찾으러 가볼까요?" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginBottom="14dp"
+        android:gravity="center_horizontal"
+        android:background="#FF5733"
+        android:layout_marginTop="14dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_handcuffs"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="절도"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보통"
+                android:textSize="14sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_handcuffs"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="강도"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보통"
+                android:textSize="14sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_handcuffs"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="폭행"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보통"
+                android:textSize="14sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Daily crime status section -->
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="일별 범죄 내역"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:stretchColumns="1"
+        android:background="#FFFFFF">
+
+        <TableRow
+            android:background="#FFEB3B">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="요일"
+                android:textSize="14sp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시간"
+                android:textSize="14sp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="컨디션"
+                android:textSize="14sp"
+                android:textColor="#000000"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="월요일"
+                android:textSize="14sp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00~06:00"
+                android:textSize="14sp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보통"
+                android:textSize="14sp"
+                android:textColor="#000000"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="월요일"
+                android:textSize="14sp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="06:00~12:00"
+                android:textSize="14sp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="좋음"
+                android:textSize="14sp"
+                android:textColor="#000000"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="월요일"
+                android:textSize="14sp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00~18:00"
+                android:textSize="14sp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보통"
+                android:textSize="14sp"
+                android:textColor="#000000"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="월요일"
+                android:textSize="14sp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18:00~24:00"
+                android:textSize="14sp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보통"
+                android:textSize="14sp"
+                android:textColor="#000000"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"></LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+</LinearLayout>

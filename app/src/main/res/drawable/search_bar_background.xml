@@ -1,0 +1,6 @@
+<!-- res/drawable/search_bar_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#DDDDDD"/> <!-- 배경색을 원하는 색상으로 변경하세요 -->
+    <corners android:radius="8dp"/> <!-- 모서리의 둥글기를 조절하세요 -->
+</shape>
